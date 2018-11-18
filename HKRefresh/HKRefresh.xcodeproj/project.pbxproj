@@ -13,6 +13,9 @@
 		C69CDF1E21A19721000A3AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69CDF1D21A19721000A3AFB /* Assets.xcassets */; };
 		C69CDF2121A19721000A3AFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C69CDF1F21A19721000A3AFB /* LaunchScreen.storyboard */; };
 		C69CDF2421A19721000A3AFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C69CDF2321A19721000A3AFB /* main.m */; };
+		C69CDF3021A1989C000A3AFB /* HKRefreshIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69CDF2B21A1989C000A3AFB /* HKRefreshIcon.xcassets */; };
+		C69CDF3121A1989C000A3AFB /* HKRefreNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = C69CDF2C21A1989C000A3AFB /* HKRefreNormalView.m */; };
+		C69CDF3221A1989C000A3AFB /* HKRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C69CDF2D21A1989C000A3AFB /* HKRefreshControl.m */; };
 		FA8F32A05584EA86226D54F0 /* libPods-HKRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0383E794E30A14E3681548C2 /* libPods-HKRefresh.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +33,11 @@
 		C69CDF2021A19721000A3AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C69CDF2221A19721000A3AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C69CDF2321A19721000A3AFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C69CDF2B21A1989C000A3AFB /* HKRefreshIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HKRefreshIcon.xcassets; sourceTree = "<group>"; };
+		C69CDF2C21A1989C000A3AFB /* HKRefreNormalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKRefreNormalView.m; sourceTree = "<group>"; };
+		C69CDF2D21A1989C000A3AFB /* HKRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKRefreshControl.m; sourceTree = "<group>"; };
+		C69CDF2E21A1989C000A3AFB /* HKRefreNormalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKRefreNormalView.h; sourceTree = "<group>"; };
+		C69CDF2F21A1989C000A3AFB /* HKRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKRefreshControl.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,7 @@
 		C69CDF1321A19720000A3AFB /* HKRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				C69CDF2A21A1989C000A3AFB /* HKRefresh */,
 				C69CDF1421A19720000A3AFB /* AppDelegate.h */,
 				C69CDF1521A19720000A3AFB /* AppDelegate.m */,
 				C69CDF1721A19720000A3AFB /* ViewController.h */,
@@ -83,6 +92,18 @@
 				C69CDF1F21A19721000A3AFB /* LaunchScreen.storyboard */,
 				C69CDF2221A19721000A3AFB /* Info.plist */,
 				C69CDF2321A19721000A3AFB /* main.m */,
+			);
+			path = HKRefresh;
+			sourceTree = "<group>";
+		};
+		C69CDF2A21A1989C000A3AFB /* HKRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				C69CDF2B21A1989C000A3AFB /* HKRefreshIcon.xcassets */,
+				C69CDF2C21A1989C000A3AFB /* HKRefreNormalView.m */,
+				C69CDF2D21A1989C000A3AFB /* HKRefreshControl.m */,
+				C69CDF2E21A1989C000A3AFB /* HKRefreNormalView.h */,
+				C69CDF2F21A1989C000A3AFB /* HKRefreshControl.h */,
 			);
 			path = HKRefresh;
 			sourceTree = "<group>";
@@ -154,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C69CDF2121A19721000A3AFB /* LaunchScreen.storyboard in Resources */,
+				C69CDF3021A1989C000A3AFB /* HKRefreshIcon.xcassets in Resources */,
 				C69CDF1E21A19721000A3AFB /* Assets.xcassets in Resources */,
 				C69CDF1C21A19720000A3AFB /* Main.storyboard in Resources */,
 			);
@@ -188,8 +210,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C69CDF1921A19720000A3AFB /* ViewController.m in Sources */,
+				C69CDF3121A1989C000A3AFB /* HKRefreNormalView.m in Sources */,
 				C69CDF2421A19721000A3AFB /* main.m in Sources */,
 				C69CDF1621A19720000A3AFB /* AppDelegate.m in Sources */,
+				C69CDF3221A1989C000A3AFB /* HKRefreshControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +358,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HKRefresh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = demo.HKRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -348,7 +375,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HKRefresh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = demo.HKRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
