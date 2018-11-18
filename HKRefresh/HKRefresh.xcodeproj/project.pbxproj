@@ -13,9 +13,13 @@
 		C69CDF1E21A19721000A3AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69CDF1D21A19721000A3AFB /* Assets.xcassets */; };
 		C69CDF2121A19721000A3AFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C69CDF1F21A19721000A3AFB /* LaunchScreen.storyboard */; };
 		C69CDF2421A19721000A3AFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C69CDF2321A19721000A3AFB /* main.m */; };
+		FA8F32A05584EA86226D54F0 /* libPods-HKRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0383E794E30A14E3681548C2 /* libPods-HKRefresh.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0383E794E30A14E3681548C2 /* libPods-HKRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HKRefresh.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A2FBA187EDE44C566D7C976 /* Pods-HKRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKRefresh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HKRefresh/Pods-HKRefresh.debug.xcconfig"; sourceTree = "<group>"; };
+		509B51410E91E176A0927862 /* Pods-HKRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HKRefresh.release.xcconfig"; path = "Pods/Target Support Files/Pods-HKRefresh/Pods-HKRefresh.release.xcconfig"; sourceTree = "<group>"; };
 		C69CDF1121A19720000A3AFB /* HKRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69CDF1421A19720000A3AFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C69CDF1521A19720000A3AFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8F32A05584EA86226D54F0 /* libPods-HKRefresh.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE7EC55535F9CA62F38DBDB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A2FBA187EDE44C566D7C976 /* Pods-HKRefresh.debug.xcconfig */,
+				509B51410E91E176A0927862 /* Pods-HKRefresh.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C69CDF0821A19720000A3AFB = {
 			isa = PBXGroup;
 			children = (
 				C69CDF1321A19720000A3AFB /* HKRefresh */,
 				C69CDF1221A19720000A3AFB /* Products */,
+				BE7EC55535F9CA62F38DBDB1 /* Pods */,
+				EF1FB56B1AB201A7320D1687 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,14 @@
 			path = HKRefresh;
 			sourceTree = "<group>";
 		};
+		EF1FB56B1AB201A7320D1687 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0383E794E30A14E3681548C2 /* libPods-HKRefresh.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C69CDF2721A19721000A3AFB /* Build configuration list for PBXNativeTarget "HKRefresh" */;
 			buildPhases = (
+				66CA93C35FD59AD73F9E28B9 /* [CP] Check Pods Manifest.lock */,
 				C69CDF0D21A19720000A3AFB /* Sources */,
 				C69CDF0E21A19720000A3AFB /* Frameworks */,
 				C69CDF0F21A19720000A3AFB /* Resources */,
@@ -135,6 +160,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66CA93C35FD59AD73F9E28B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HKRefresh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C69CDF0D21A19720000A3AFB /* Sources */ = {
@@ -283,14 +329,12 @@
 		};
 		C69CDF2821A19721000A3AFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A2FBA187EDE44C566D7C976 /* Pods-HKRefresh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HKRefresh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = demo.HKRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,14 +343,12 @@
 		};
 		C69CDF2921A19721000A3AFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 509B51410E91E176A0927862 /* Pods-HKRefresh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HKRefresh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = demo.HKRefresh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
